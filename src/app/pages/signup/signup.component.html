@@ -1,0 +1,53 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="row mt20">
+        <div class="col-md-6 offset-md-3">
+          <mat-card>
+        <div class="container text-center">
+        <img src="../../../assets/logo.png"/>
+        </div>
+        <mat-card-title class="text-center"> SignUp Here</mat-card-title >
+      <!--{{user | json}}-->
+      <form (ngSubmit)="formSubmit()">
+        <!--userName field-->
+        <mat-form-field class="full-width "appearance="outline">
+          <mat-label>User Name</mat-label>
+          <input required [(ngModel)]="user.username"  name="username" matInput placeholder="Enter Here">
+          <mat-hint>User Name Must Be Unique !!</mat-hint>
+        </mat-form-field>
+        <!--Password-->
+        <mat-form-field class="full-width "appearance="outline">
+          <mat-label>Password</mat-label>
+          <input required [(ngModel)]="user.password"  name="password" type="password" matInput placeholder="Enter Here">
+        </mat-form-field>
+         <!--First Name-->
+         <mat-form-field class="full-width "appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input required [(ngModel)]="user.firstName"  name="firstName" matInput placeholder="Enter Here">
+        </mat-form-field>
+         <!--Last Name-->
+         <mat-form-field class="full-width "appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input required [(ngModel)]="user.lastName"  name="lastName" matInput placeholder="Enter Here">
+        </mat-form-field>
+         <!--Email-->
+         <mat-form-field class="full-width "appearance="outline">
+          <mat-label>Email</mat-label>
+          <input required [(ngModel)]="user.email"  name="email" type="email" matInput placeholder="Enter Here">
+        </mat-form-field>
+         <!--Contact No-->
+         <mat-form-field class="full-width "appearance="outline">
+          <mat-label>Contact No</mat-label>
+          <input required [(ngModel)]="user.phone"  name="phone"type="number" matInput placeholder="Enter Here">
+        </mat-form-field>
+
+        <div class="example-button-row text-center">
+          <button type="submit" mat-raised-button color="primary">SignUp</button>
+        </div>
+      </form>
+    </mat-card>
+    </div>
+      </div>
+    </div>
+    </div>
+
